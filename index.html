@@ -4,38 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latvijas Tūrisma Oāze</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Latvijas Tūrisma Oāze</h1>
-        <nav>
-            <ul>
-                <li><a href="#par-mums">Par mums</a></li>
-                <li><a href="#kontakti">Kontakti</a></li>
-                <li><a href="#palīdzība">Palīdzība</a></li>
-                <li><a href="#registracija">Reģistrēties</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="galerija">
-        <button onclick="prevImage()">&#10094;</button>
-        <img id="gallery-image" src="image1.jpg" alt="Galerijas attēls">
-        <button onclick="nextImage()">&#10095;</button>
-    </section>
-    
-    <section id="registracija">
-        <h2>Reģistrācija</h2>
-        <input type="text" id="username" placeholder="Lietotājvārds">
-        <input type="password" id="password" placeholder="Parole">
-        <button onclick="login()">Pieslēgties</button>
-        <p id="login-message"></p>
-    </section>
-    
-    <section id="sudzibas">
-        <h2>Sūdzību forma</h2>
-        <textarea id="complaint" placeholder="Ierakstiet savu sūdzību..."></textarea>
-        <button onclick="submitComplaint()">Nosūtīt</button>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('par-mums')">Par mums</a></li>
+            <li><a href="#" onclick="showPage('kontakti')">Kontaki</a></li>
+            <li><a href="#" onclick="showPage('palidziba')">Palīdzība</a></li>
+            <li><a href="#" onclick="showPage('registreties')">Reģistrēties</a></li>
+        </ul>
+    </nav>
+
+    <div class="logo">
+        <img src="https://cdn.glitch.global/5e6516fa-2297-4c9c-85c0-ee33c66eb1cc/destination.png" alt="Logo">
+        <h1>LATVIJAS TŪRISMA OĀZE</h1>
+    </div>
+
+    <div id="main-content">
+        <div class="content-grid">
+            <div class="box" onclick="showPage('izbrauciens-cauri-latvijai')">
+                <h3>Izbrauciens cauri Latvijai</h3>
+            </div>
+            <div class="box" onclick="showPage('pastaiga-pa-vecrigu')">
+                <h3>Pastaiga pa vecrīgu</h3>
+            </div>
+            <div class="box" onclick="showPage('jautrais-izbrauciens')">
+                <h3>Jautrais izbrauciens ģimenei</h3>
+            </div>
+            <div class="box" onclick="showPage('pastaiga-pa-juralu')">
+                <h3>Pastaiga pa jūrmalu</h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
