@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="lv">
 <head>
@@ -7,39 +8,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <a href="input.html">Input</a>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#sakums">Sākums</a></li>
+                <li><a href="#par-mums">Par mums</a></li>
+                <li><a href="#kontakti">Kontakti</a></li>
+                <li><a href="#palidziba">Palīdzība</a></li>
+                <li><a href="login.html">Pieslēgties</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showPage('par-mums')">Par mums</a></li>
-            <li><a href="#" onclick="showPage('kontakti')">Kontakti</a></li>
-            <li><a href="#" onclick="showPage('palidziba')">Palīdzība</a></li>
-            <li><a href="#" onclick="showPage('registreties')">Reģistrēties</a></li>
-        </ul>
-    </nav>
+    <main>
+        <div class="logo">
+            <img src="attached_assets/latvijas-trisma-oaze-high-resolution-logo-transparent.png" alt="Logo">
+        </div>
 
-    <div class="logo">
-        <img src="attached_assets/latvijas-trisma-oaze-high-resolution-logo-transparent.png" alt="Logo">
-    </div>
+        <div id="galerija" class="galerija">
+            <div class="container">
+                <img src="attached_assets/Jurmalas-pilsetas-muzejs-1.jpg" alt="Bilde 1">
+                <img src="attached_assets/Ekrānuzņēmums 2025-03-20 111554.png" alt="Bilde 2">
+                <img src="attached_assets/Ekrānuzņēmums 2025-03-27 111610.png" alt="Bilde 3">
+            </div>
+            <button onclick="previousImage()">Iepriekšējā</button>
+            <button onclick="nextImage()">Nākamā</button>
+        </div>
 
-    <div id="main-content"></div>
-
-    <div id="main-content">
         <div class="content-grid">
-            <div class="box" onclick="showPage('izbrauciens-cauri-latvijai')">
+            <div class="box" id="izbrauciens">
                 <h3>Izbrauciens cauri Latvijai</h3>
+                <p>Brauciens uz dagupiem</p>
+                <p>Talsi pa ceļš vidus mājas</p>
+                <p>Izbrauciens pa dienu uz katru būdiņu</p>
             </div>
-            <div class="box" onclick="showPage('pastaiga-pa-vecrigu')">
-                <h3>Pastaiga pa vecrīgu</h3>
+            <div class="box" id="vecriga">
+                <h3>Pastaiga pa Vecrīgu</h3>
+                <p>Pieturvieta: Līvu laukums</p>
+                <p>Izbrauciens uz Līgatu 10:30-23:00</p>
             </div>
-            <div class="box" onclick="showPage('jautrais-izbrauciens')">
+            <div class="box" id="gimenei">
                 <h3>Jautrais izbrauciens ģimenei</h3>
+                <p>Jump space rīga</p>
+                <p>Tarzāna taka/kalnu slēpošana</p>
             </div>
-            <div class="box" onclick="showPage('pastaiga-pa-juralu')">
-                <h3>Pastaiga pa jūrmalu</h3>
+            <div class="box" id="jurmala">
+                <h3>Pastaiga pa Jūrmalu</h3>
+                <p>Pastaigas uz vietējo hoteļu</p>
+                <p>Pusdienas: Light house Jūrmala</p>
             </div>
         </div>
-    </div>
+
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/your-video-id" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Latvijas Tūrisma Oāze</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

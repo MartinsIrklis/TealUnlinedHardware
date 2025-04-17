@@ -1,3 +1,5 @@
+
+/* Global styles */
 body {
     margin: 0;
     padding: 0;
@@ -5,12 +7,13 @@ body {
     background-color: #d9f7f6;
 }
 
-nav {
+/* Header and Navigation */
+header {
     background-color: #333;
     padding: 15px 0;
 }
 
-nav ul {
+.menu {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -18,16 +21,17 @@ nav ul {
     justify-content: flex-end;
 }
 
-nav ul li {
+.menu li {
     margin: 0 20px;
 }
 
-nav ul li a {
+.menu li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
+/* Logo */
 .logo {
     text-align: center;
     padding: 20px;
@@ -38,11 +42,30 @@ nav ul li a {
     height: auto;
 }
 
-.logo h1 {
-    margin: 10px 0;
-    color: #333;
+/* Gallery */
+.galerija {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
 }
 
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.container img:first-child {
+    display: block;
+}
+
+/* Content Grid */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,11 +82,41 @@ nav ul li a {
     text-align: center;
     cursor: pointer;
     min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.box h3 {
-    margin: 0;
+/* Login Form */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

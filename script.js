@@ -1,39 +1,54 @@
-function showPage(pageName) {
-    const mainContent = document.getElementById('main-content');
+
+// Gallery functionality
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.container img');
+
+function showImage(index) {
+    images.forEach(img => img.style.display = 'none');
+    images[index].style.display = 'block';
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+}
+
+function previousImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    showImage(currentImageIndex);
+}
+
+// Login validation
+function validateLogin(event) {
+    event.preventDefault();
     
-    // Here you can add specific content for each page
-    switch(pageName) {
-        case 'par-mums':
-            mainContent.innerHTML = `
-                <h2>Par mums</h2>
-                <p>Mēs vēlamies piedāvāt ko īpašu ar ģimeni pavadīt laiku.</p>
-                <p>Mēs jūs aizvedīsim uz vietas ko vēlaties paši labi pavadīt laiku.</p>
-            `;
-            break;
-        case 'kontakti':
-            mainContent.innerHTML = `
-                <h2>Kontakti</h2>
-                <p>Email: tourism.info@gmail.com</p>
-                <p>Tālrunis: +371 12345678</p>
-            `;
-            break;
-        // Add other cases for different pages
-        default:
-            mainContent.innerHTML = `
-                <div class="content-grid">
-                    <div class="box" onclick="showPage('izbrauciens-cauri-latvijai')">
-                        <h3>Izbrauciens cauri Latvijai</h3>
-                    </div>
-                    <div class="box" onclick="showPage('pastaiga-pa-vecrigu')">
-                        <h3>Pastaiga pa vecrīgu</h3>
-                    </div>
-                    <div class="box" onclick="showPage('jautrais-izbrauciens')">
-                        <h3>Jautrais izbrauciens ģimenei</h3>
-                    </div>
-                    <div class="box" onclick="showPage('pastaiga-pa-juralu')">
-                        <h3>Pastaiga pa jūralu</h3>
-                    </div>
-                </div>
-            `;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+
+    if (username && password && email) {
+        alert('Jūs esat veiksmīgi pieslēdzies!');
+        return true;
+    } else {
+        alert('Lūdzu aizpildiet visus laukus!');
+        return false;
     }
 }
+
+// Navigation functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.menu a');
+    
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
