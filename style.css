@@ -47,6 +47,9 @@ header {
     width: 80%;
     margin: 20px auto;
     text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .container {
@@ -59,6 +62,7 @@ header {
     width: 100%;
     height: auto;
     display: none;
+    border-radius: 5px;
 }
 
 .container img:first-child {
@@ -71,17 +75,17 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .box {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #333;
     padding: 20px;
     text-align: center;
-    cursor: pointer;
-    min-height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* Login Form */
@@ -90,7 +94,7 @@ header {
     margin: 50px auto;
     padding: 20px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -110,13 +114,30 @@ header {
     border-radius: 4px;
 }
 
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
 /* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 50px;
+}
+
+iframe {
+    display: block;
+    margin: 40px auto;
+    max-width: 100%;
 }
